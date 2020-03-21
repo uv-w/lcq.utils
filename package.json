@@ -1,6 +1,6 @@
 {
   "name": "lcq.utils",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "a lot of tools",
   "main": "libs/index.js",
   "bin": {
