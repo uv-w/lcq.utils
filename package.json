@@ -1,11 +1,26 @@
 {
   "name": "lcq.utils",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a lot of tools",
+  "main": "libs/index.js",
+  "bin": {
+    "lcq-del": "libs/bin/del.js"
+  },
   "scripts": {
+    "dev": "tsc -w",
+    "build": "rimraf libs && tsc",
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "ostwind<9837438@qq.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.2",
+    "typescript": "^3.8.3"
+  },
+  "repository": ""
 }

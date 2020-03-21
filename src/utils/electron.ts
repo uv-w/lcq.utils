@@ -1,5 +1,4 @@
-
-exports.isElectron = function() {
+const isElectron = (): boolean => {
     // Renderer process
     if (typeof window !== 'undefined' && typeof window.process === 'object' && window.process.type === 'renderer') {
         return true;
@@ -18,7 +17,7 @@ exports.isElectron = function() {
     return false;
 };
 
-exports.isMac = function(){
+const isMac = (): boolean => {
     if (typeof process !== 'undefined' && typeof process.platform === 'string' && process.platform === 'darwin'){
         return true;
     }
@@ -28,7 +27,7 @@ exports.isMac = function(){
     return false;
 };
 
-exports.isLinux = function(){
+const isLinux = (): boolean => {
     if (typeof process !== 'undefined' && typeof process.platform === 'string' && process.platform === 'linux'){
         return true;
     }
@@ -38,7 +37,7 @@ exports.isLinux = function(){
     return false;
 };
 
-exports.isWin = function(){
+const isWin = (): boolean => {
     if (typeof process !== 'undefined' && typeof process.platform === 'string' && process.platform === 'win32'){
         return true;
     }
@@ -47,3 +46,10 @@ exports.isWin = function(){
     }
     return false;
 };
+
+export default {
+    isWin,
+    isLinux,
+    isMac,
+    isElectron
+}
