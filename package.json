@@ -1,10 +1,11 @@
 {
   "name": "lcq.utils",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "a lot of tools",
   "main": "libs/index.js",
   "bin": {
-    "lcq-del": "libs/bin/del.js"
+    "lcq-del": "libs/bin/del.js",
+    "lcq-open": "libs/bin/open.js"
   },
   "scripts": {
     "dev": "tsc -w",
@@ -17,10 +18,14 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "commander": "^5.0.0",
+    "file-type": "^14.1.4",
+    "get-stdin": "^7.0.0",
     "inquirer": "^7.1.0",
+    "meow": "^6.1.0",
     "open": "^7.0.3",
     "progress": "^2.0.3",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "temp-write": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
