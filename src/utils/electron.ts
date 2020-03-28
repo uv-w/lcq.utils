@@ -82,3 +82,10 @@ export const isWin = (): boolean => {
   }
   return false;
 };
+
+export default {
+  isWin,
+  isMac,
+  isLinux,
+  isElectron
+};

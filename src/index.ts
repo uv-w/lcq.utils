@@ -1,9 +1,6 @@
-import del from './utils/del';
-import electron from './utils/electron';
-import color from './utils/color';
+import file from "./utils/file";
+import electron from "./utils/electron";
+import request from "./utils/request";
+import cli from "./utils/cli";
 
-export {
-    del,
-    electron,
-    color
-}
+export { file, electron, cli, request };
