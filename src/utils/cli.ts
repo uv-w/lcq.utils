@@ -1,12 +1,12 @@
-import { prompt } from "inquirer";
-import * as _commander from "commander";
-import _progress from "progress";
-import * as chalk from "chalk";
+import _inquirer from "./base/inquirer";
+import _commander from "./base/commander";
+import _progress from "./base/progress";
+import _chalk from "./base/chalk";
 
-export const ask = prompt;
+export const ask = _inquirer;
 export const progress = _progress;
 export const commander = _commander;
-export const color = Object.assign(chalk);
+export const color = Object.assign(_chalk);
 
 export default {
   ask,

@@ -1,5 +1,5 @@
-import _rimraf from "rimraf";
-import * as _open from "open";
+import _rimraf from "./base/rimraf";
+import _open from "./base/open";
 
 export const open = _open;
 export const del = _rimraf;

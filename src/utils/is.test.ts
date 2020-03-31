@@ -1,4 +1,4 @@
-import { isWin, isLinux, isMac, isElectron } from "./electron";
+import { isWin, isLinux, isMac, isElectron } from "./is";
 
 test("isWin", () => {
   expect(isWin()).toBe(false);

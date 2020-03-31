@@ -1,0 +1,65 @@
+# lcq.utils
+
+一个工具集合
+
+## 安装
+
+```js
+$ npm install lcq.utils --save  // yarn add lcq.utils
+```
+
+## 使用
+
+### 常用工具
+
+```js
+import utils, { request, is, file, cli, string } from "lcq.utils";
+
+// is
+utils.is.isElectron(); // is.isElectron()
+utils.is.isWin(); // is.isWin()
+utils.is.isMac(); // is.isMac()
+utils.is.isLinux(); // is.isLinux()
+
+// request
+const res = await request.get("/api/v1/getUserInfo");
+
+// file
+file.open("http://baidu.com"); // 浏览器打开
+file.del("/somefile"); // 删除文件
+
+// string
+string.uuid(); // 75cb6b99-c257-41e6-b9f2-ae7ad1d31ce9
+```
+
+### terminal 工具
+
+- `lcq-del` 删除本地文件
+
+```console
+$ lcq-del ./somefile
+```
+
+- `lcq-serve` 在当前目录起一个静态服务
+
+```console
+$ cd someDir
+
+$ lcq-serve
+
+->  http://localhost:5000
+```
+
+- `lcq-open` 本地浏览器打开链接
+
+```console
+$ lcq-open https://baidu.com
+```
+
+- `lcq-uuid` 生成一个 uuid
+
+```console
+$ lcq-uuid
+
+-> 75cb6b99-c257-41e6-b9f2-ae7ad1d31ce9
+```

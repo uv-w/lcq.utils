@@ -1,21 +1,25 @@
 {
   "name": "lcq.utils",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "a lot of tools",
   "main": "libs/index.js",
   "bin": {
     "lcq-del": "libs/bin/del.js",
-    "lcq-open": "libs/bin/open.js"
+    "lcq-open": "libs/bin/open.js",
+    "lcq-uuid": "libs/bin/uuid.js",
+    "lcq-serve": "libs/bin/serve.js"
   },
   "scripts": {
     "dev": "tsc -w",
     "build": "rimraf libs && tsc",
-    "prepare": "npm run build",
-    "test": "jest"
+    "prepublish": "npm run test && npm run build",
+    "postpublish": "node libs/bin/open.js https://www.npmjs.com/package/lcq.utils",
+    "test": "jest --runInBand --detectOpenHandles"
   },
   "author": "ostwind<9837438@qq.com>",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "chalk": "^3.0.0",
     "commander": "^5.0.0",
     "file-type": "^14.1.4",
@@ -23,9 +27,13 @@
     "inquirer": "^7.1.0",
     "meow": "^6.1.0",
     "open": "^7.0.3",
+    "ping": "^0.2.2",
     "progress": "^2.0.3",
     "rimraf": "^3.0.2",
-    "temp-write": "^4.0.0"
+    "serve": "^11.3.0",
+    "temp-write": "^4.0.0",
+    "umi-request": "^1.2.19",
+    "uuid": "^7.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -33,7 +41,9 @@
     "@babel/preset-typescript": "^7.9.0",
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.2",
+    "@types/uuid": "^7.0.2",
     "babel-jest": "^25.2.3",
+    "create-test-server": "^3.0.1",
     "inquirer-test": "^2.0.1",
     "jest": "^25.2.3",
     "ts-jest": "^25.2.1",
