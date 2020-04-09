@@ -29,6 +29,7 @@
     "file-type": "^14.1.4",
     "get-stdin": "^7.0.0",
     "inquirer": "^7.1.0",
+    "internal-ip": "^6.0.0",
     "meow": "^6.1.0",
     "normalize-url": "^5.0.0",
     "open": "^7.0.3",
