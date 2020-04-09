@@ -1,4 +1,4 @@
-import { ask, progress, commander, color } from "./cli";
+import { ask, progress, commander, color, shell } from "./cli";
 
 // test("ask", async () => {
 //   const questions = [
@@ -25,10 +25,14 @@ import { ask, progress, commander, color } from "./cli";
 //     }
 //   }, 100);
 // });
-test("color", () => {
-  console.log(color.blue("this is a blue text for cli color"));
-  // expect().toBe(false);
+
+describe("cli test", () => {
+  it("color test", () => {
+    console.log(color.blue("this is a blue text for cli color"));
+  });
+
+  it("shell test", async () => {
+    const result = shell.ls(__dirname);
+    expect(result).toEqual(expect.arrayContaining(["cli.test.ts"]));
+  });
 });
-// test("color", () => {
-//   expect(isElectron()).toBe(false);
-// });

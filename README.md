@@ -13,7 +13,7 @@ $ npm install lcq.utils --save  // yarn add lcq.utils
 ### 常用工具
 
 ```js
-import utils, { request, is, file, cli, string } from "lcq.utils";
+import utils, { request, is, file, cli, string, network } from "lcq.utils";
 
 // is
 utils.is.isElectron(); // is.isElectron()
@@ -30,6 +30,14 @@ file.del("/somefile"); // 删除文件
 
 // string
 string.uuid(); // 75cb6b99-c257-41e6-b9f2-ae7ad1d31ce9
+
+// network
+network.normalizeUrl("baidu.com"); // => 'http://baidu.com'
+await network.ping.promise.probe("127.0.0.1"); // => {alive: true, ...}
+
+// cli
+cli.shell.ls("./"); // => show current dir files
+console.log(cli.color.blue("this is a blue text for cli color"));
 ```
 
 ### terminal 工具
@@ -62,4 +70,26 @@ $ lcq-open https://baidu.com
 $ lcq-uuid
 
 -> 75cb6b99-c257-41e6-b9f2-ae7ad1d31ce9
+```
+
+- `lcq-start` 在一个命令行同时运行多个命令
+
+```package.json
+"scripts": {
+        // ...
+        "watch-js": "...",
+        "watch-less": "...",
+        "start": "lcq-start \"npm:watch-js\" \"npm:watch-less\""
+        // ...
+}
+
+->
+```
+
+- `lcq-shell` 跨平台的 unix 脚本执行
+
+```console
+$ lcq-shell echo hello world
+
+-> hello world
 ```

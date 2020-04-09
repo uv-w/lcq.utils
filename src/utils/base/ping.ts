@@ -1,2 +1,2 @@
-import ping from "ping";
+import * as ping from "ping";
 export default ping;
