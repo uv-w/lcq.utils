@@ -13,7 +13,7 @@ import {
   log
 } from "./npm";
 
-const utilsVersion: string = require("../../package.json").version;
+// const utilsVersion: string = require("../../package.json").version;
 describe("npm test", () => {
   it("getNpmTarball test", async done => {
     const result = await getNpmTarball("lcq.utils");
@@ -49,13 +49,14 @@ describe("npm test", () => {
 
   it("getLatestVersion test", async done => {
     const result = await getLatestVersion("lcq.utils");
-    expect(result).toBe(utilsVersion);
+    expect(result).toMatch(/^\d+\.\d+\.\d+/);
     done();
   });
 
   it("getNpmLatestSemverVersion test", async done => {
-    const result = await getNpmLatestSemverVersion("lcq.utils", utilsVersion);
-    expect(result).toBe(utilsVersion);
+    const version = await getLatestVersion("lcq.utils");
+    const result = await getNpmLatestSemverVersion("lcq.utils", version);
+    expect(result).toBe(version);
     done();
   });
 });
