@@ -10,6 +10,33 @@
 
 ---
 
+## 3.1.0
+
+`2020-04-10`
+
+- 📖 功能增加或完善
+  - ⚡️ 增加 `lcq-shell`
+  - ⚡️ 增加 `lcq-open`
+  - ⚡️ 增加 `network`
+    - `ping`
+    - `normalizeUrl()`
+    - `isAt100Tal()`
+    - `getIpV4()`
+    - `getIpV6()`
+    - `getPublicNetworkIp()`
+  - ⚡️ 增加 `cli`
+    - `shell`
+  - ⚡️ 增加 `file`
+    - `mkdirp()`
+  - ⚡️ 增加 `string`
+    - `semver()`
+  - ⚡️ 增加 `npm`
+    - `getLatestVersion`
+    - `getNpmLatestSemverVersion`
+    - `getNpmRegistry`
+    - `getNpmClient`
+    - `getNpmTarball`
+
 ## 3.0.0
 
 `2020-04-01`
