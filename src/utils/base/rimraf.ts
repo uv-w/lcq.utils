@@ -1,2 +1,2 @@
-import rimraf from "rimraf";
+import * as rimraf from "rimraf";
 export default rimraf;

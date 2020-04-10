@@ -5,6 +5,7 @@
     "outDir": "libs",
     "declaration": true,
     "target": "es5",
+    "resolveJsonModule": true,
     "lib": [
       "dom",
       "es5",
