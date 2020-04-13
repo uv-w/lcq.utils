@@ -47,8 +47,8 @@ console.log(cli.color.blue("this is a blue text for cli color"));
 
 // npm
 await npm.getNpmTarball("lcq.utils"); // => https://registry.npm.taobao.org/lcq.utils/download/lcq.utils-${version}.tgz
-await getNpmInfo("lcq.utils"); // => {name: 'lcq.utils', versions: [],....}
-await getLatestVersion("lcq.utils"); // => 3.0.1
+await npm.getNpmInfo("lcq.utils"); // => {name: 'lcq.utils', versions: [],....}
+await npm.getLatestVersion("lcq.utils"); // => 3.0.1
 ...
 
 
