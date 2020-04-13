@@ -9,7 +9,8 @@
     "lcq-uuid": "libs/bin/uuid.js",
     "lcq-serve": "libs/bin/serve.js",
     "lcq-start": "libs/bin/start.js",
-    "lcq-shell": "libs/bin/shell.js"
+    "lcq-shell": "libs/bin/shell.js",
+    "lcq-qrcode": "libs/bin/qrcode.js"
   },
   "scripts": {
     "dev": "tsc -w",
@@ -37,6 +38,7 @@
     "open": "^7.0.3",
     "ping": "^0.2.3",
     "progress": "^2.0.3",
+    "qrcode": "^1.4.4",
     "request-progress": "^3.0.0",
     "request-promise": "^4.2.5",
     "rimraf": "^3.0.2",
