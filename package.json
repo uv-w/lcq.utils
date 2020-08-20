@@ -23,7 +23,7 @@
   "author": "ostwind<9837438@qq.com>",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "chalk": "^3.0.0",
     "commander": "^5.0.0",
     "concurrently": "^5.1.0",
